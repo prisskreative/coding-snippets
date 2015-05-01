@@ -51,4 +51,7 @@ gem 'materialize-sass'
 #react
 gem 'react-rails', '~> 1.0'
 
+# markdown compiler
+gem 'showdown-rails'
+
 

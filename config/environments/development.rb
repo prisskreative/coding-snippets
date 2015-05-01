@@ -1,4 +1,9 @@
 Rails.application.configure do
+
+  # react
+  config.react.variant = :development
+
+  config.react.addons = true # defaults to false
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
