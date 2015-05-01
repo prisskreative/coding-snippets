@@ -1,0 +1,23 @@
+
+<div class="container">
+
+<a href="<%= new_category_path %>">
+  Add a new category
+</a>
+<br>
+
+<a href="<%= new_category_snippet_path %>">
+  Add a new snippets
+</a>
+
+<h4> Snippet index </h4>
+
+<%= @category.name %>
+
+<ul>
+  <% @category.snippets.each do |snippets| %>
+    <li><%= snippets.name %></li>
+  <% end %>
+</ul>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+
+<%= form_for [@user, @category] do |f| %>
+
+   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <%= f.submit 'Save' %>
+
+  <%= link_to('Delete', user_category_path(@user , @category),
+           method: :delete, data: {confirm: 'Are you sure?'}) %>
+
+<% end %>
+
+</div>

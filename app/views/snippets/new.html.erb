@@ -1,0 +1,33 @@
+<div class="container">
+
+Add to <%= @category.name %>
+
+<h4> Snippets new</h4>
+
+<%= form_for [@category, @snippet] do |f| %>
+ <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+ </div>
+
+ <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, autofocus: true %>
+ </div>
+
+ <div class="field">
+    <%= f.label :short_url %><br />
+    <%= f.text_field :short_url, autofocus: true %>
+ </div>
+
+ <div class="field">
+    <%= f.label :tags %><br />
+    <%= f.text_field :tags, autofocus: true %>
+ </div>
+
+  <button type="submit" >
+    Add snippet
+  </button>
+<% end %>
+
+</div>

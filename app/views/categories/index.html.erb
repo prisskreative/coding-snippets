@@ -1,0 +1,17 @@
+<div class="container">
+
+<a href="<%= new_category_path %>">
+  Add a new category
+</a>
+
+<h4> Categories index </h4>
+
+<%= @user.name %>
+
+<ul>
+  <% @user.categories.each do |categories| %>
+    <li><%= categories.name %></li>
+  <% end %>
+</ul>
+
+</div>
