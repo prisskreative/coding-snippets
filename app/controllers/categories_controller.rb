@@ -3,7 +3,9 @@ class CategoriesController < ApplicationController
 
   def index
   	@user = User.find current_user
-    @category = @user.categories.order(created_at: :desc).limit(10)
+    @categories = @user.categories.order(created_at: :desc).limit(10)
+    @category = @user.categories.new
+    @snippets = @user.snippets.order(created_at: :desc).limit(10)
   end
 
   def show

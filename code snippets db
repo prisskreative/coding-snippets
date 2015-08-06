@@ -1,0 +1,48 @@
+users  User
+id - int
+name - string (255)
+email - string (255)
+password - string (255)
+
+snippets Snippet
+id - int
+name - string (255)
+description - text
+short_url - string (Random 8 character string) (index)
+tags - string (php,laravel,ruby) - Loop in array.
+
+categories Category
+id - int
+name - string (255) (html, css, js) - Este campo guardaria uno de esos 3 valores. 
+
+categories_snippets 
+Esta tabla es "pivot". Guarda la relacion entre "categories" y "snippets"
+id - int
+snippet_id - int
+category_id - int
+
+codes Code
+id - int
+snippet_id - int
+type - string - (html, css, js) - Este campo guardaria uno de esos 3 valores
+code - text
+
+comments Comment
+id - int
+user_id - int
+snippet_id - int
+comment - text
+
+likes Like
+id - int
+user_id - int
+snippet_id - int
+
+notifications Notification
+id - int 
+type - string - (comment, like) - Este campo guardaria uno de estos 2 valores
+auth_user_id - int
+receiver_user_id - int
+comment_id - int
+
+

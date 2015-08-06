@@ -1,7 +1,99 @@
+body{
+	background-color:#f5f7fa;
+	color:#607d8b;
+}
+
 h1 {
-	color:#333333;
+	color:#444444;
+}
+
+hr{
+	margin:20px 0;
+	background-color:#eee;
+}
+
+.clear20{
+	clear:both;
+	height:20px;
+}
+
+.margin0{
+	margin:0;
 }
 
 nav{
+	background-color:#384958;
+	
+}
+
+.brand-logo{
+	margin-left:15px;
+}
+
+.profile-img{
+	margin-top:-20px;
+}
+
+.btn{
+	background-color:#ddd;
+	color:#425566;
+}
+
+
+/* Profile */
+
+.profile{
+
+}
+
+.tabs .tab a{
+	color:#37474f;
+}
+
+.tabs .tab a:hover{
+	color:#fff;
 	background-color:#37474f;
 }
+
+.tabs .indicator{
+	background-color:#37474f;
+}
+
+.middle-nav{
+	margin-top:-5px;
+	margin-bottom:100px;
+	border-bottom:1px solid #ddd;
+}
+
+.sidebar{	
+	margin-bottom:0;
+	background-color:#425566;
+	color: #fff;
+	border-right:1px solid #ddd;
+	font-size:16px;	
+	height:1500px;
+}
+
+.padding20{
+	padding: 20px;
+}
+
+.sidebar a{
+	color:#fff;
+}
+
+.sidebar ul{
+	margin-top:30px;
+}
+
+.sidebar li{
+	padding-bottom:10px;
+}
+
+.description textarea{
+	background-color: #fff;
+	color:#000;
+	height:400px;
+}
+
+

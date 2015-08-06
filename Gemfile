@@ -54,4 +54,5 @@ gem 'react-rails', '~> 1.0'
 # markdown compiler
 gem 'showdown-rails'
 
-
+# upload images
+gem 'carrierwave'

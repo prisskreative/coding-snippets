@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'react/home'
+
   root 'categories#index'
 
   resources :snippets
   resources :categories
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
 =begin
    Prefix Verb   URI Pattern                    Controller#Action

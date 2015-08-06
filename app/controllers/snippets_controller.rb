@@ -2,9 +2,10 @@ class SnippetsController < ApplicationController
 
 
   def index
-  	@user = User.find current_user
-  	@category = Category.find_by(id: params[:category_id])
-    @snippet = @category.snippets.order(created_at: :desc).limit(10)
+  	@user = User.find current_user 
+  	@category = @user.categories.find_by(id: params[:category_id])
+    @snippet = @category.snippets.new
+    @snippets = @category.snippets.order(created_at: :desc).limit(10)  
   end
 
   def show

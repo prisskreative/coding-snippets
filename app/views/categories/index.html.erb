@@ -1,17 +1,42 @@
-<div class="container">
+<div class="row">
 
-<a href="<%= new_category_path %>">
-  Add a new category
-</a>
+  <div class="col s3 sidebar">
+   <div class="padding20">
+         <%= render partial: "new", locals: {category: @category} %>
 
-<h4> Categories index </h4>
+    <ul>
+        <% @user.categories.each do |category| %>
+           <li>
+             <a href="/categories/<%= category.id %>/snippets">
+               <%=category.name%>
+             </a>
+           </li>
+        <% end %>
+    </ul>
+   </div>
+</div>
 
-<%= @user.name %>
+<div class="col s9">
 
-<ul>
-  <% @user.categories.each do |categories| %>
-    <li><%= categories.name %></li>
-  <% end %>
-</ul>
+<div class="clearboth20"></div>
+
+<h4 class="title center-align"> Latest Snippets</h4>
+
+ <img src="<%= @user.avatar %>" width="100%">
+
+
+<% current_user.snippets.each do |snippets| %>  
+
+  <div class="col s3 card">
+
+     <h4><%= snippets.name %></h4>
+   <hr>
+  </div>
+
+<% end %>
 
 </div>
+</div>
+
+
+
